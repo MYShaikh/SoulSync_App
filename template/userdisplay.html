@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Form</title>
+</head>
+<body >
+
+    <h2>Display</h2>
+    user display
+    <h5>{{dob}}</h5>
+    <h5>{{gender}}</h5>
+    {% for img in profileImage %}
+        <img src = "{{img.profimage.url}}" width = "100px" height = "100px">
+    {% endfor %}
+    <form>
+        <input type = "submit" name = "edit" value = "EDIT">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Login{% endblock %}
+{% block contant %}
+
+    <h2>Contact Form</h2>
+<div class= "center-button2">
+    <form method="post" enctype = "multipart/form-data">
+        {% csrf_token %}
+
+<br>
+        <input type="date" id="DOB" style = "height:50px;" name="dob" required><br><br>
+        <table class = "table1">
+            <tr>
+                <td>
+                    <input type="radio" id="genderMale" name="gender" value="m" class = "Genderspan" required>
+                </td>
+                <td>
+                    <label for="genderMale"><span>Male</span></label>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" id="genderFemale" name="gender" value="f" class = "Genderspan" required>
+                </td>
+                <td>
+                    <label for="genderFemale"><span>Female</span></label>
+                </td>
+            </tr>
+        </table>
+
+        <input type="file" accept="image/*" id="image1" name="image" required>
+        <input type="file" accept="image/*" id="image2" name="image" required>
+        <input type="file" accept="image/*" id="image3" name="image" required>
+        <input type="file" accept="image/*" id="image4" name="image">
+        <input type="file" accept="image/*" id="image5" name="image">
+        <input type="file" accept="image/*" id="image6" name="image">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

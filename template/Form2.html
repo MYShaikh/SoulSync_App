@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Form</title>
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="product_name">Name:</label><br>
+        <input type="text" id="product_name" name="product_name" required><br><br>
+
+        <label for="email">Product Model:</label><br>
+        <input type="text" id="produ" name="product_model" required><br><br>
+
+        <label for="message">Price:</label><br>
+        <input type="text" id="produ" name="product_price" required><br><br>
+
+        <label for="message">Product Desc:</label><br>
+        <input type="text" id="produ" name="product_desc" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

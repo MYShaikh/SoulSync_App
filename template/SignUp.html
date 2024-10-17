@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Sign Up{% endblock %}
+{% block contant %}
+<div class="center-button1">
+    <form method="post">
+        {% csrf_token %}
+        <!-- Email input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input name="username" type="text" id="form2Example1" style = "height:50px;" class="form-control" placeholder = "Enter your user name"/>
+        </div>
+
+          <br>
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input name="email" type="email" id="form2Example1" style = "height:50px;" class="form-control" placeholder = "Enter a valid Email"/>
+        </div>
+        <br>
+      
+        <!-- Password input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+          <input name="password" type="password" id="form2Example2" style = "height:50px;" class="form-control" placeholder="Enter your password"/>
+        </div>
+        <br>
+      
+        <!-- 2 column grid layout for inline styling -->
+        <div class="row mb-4">
+          <div class="col d-flex justify-content-center">
+            <!-- Checkbox -->
+
+          </div>
+      
+
+        </div>
+      
+        <!-- Submit button -->
+        <input  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4"></input>
+      
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="{% url "login" %}"
+                  class="link-danger"">Register</a></p>
+
+          </button>
+        </div>
+      </form>
+</div>
+
+{% endblock %}
