@@ -33,5 +33,6 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name="signup"),
     path('login/', LoginView.as_view(), name="login"),
     path('userinfo/<int:id>', UserProfileView.as_view(), name="userinfo"),
+    path('userinfo/', UserProfileView.as_view(), name="userinfo"),
     path('userdisplay/', UserDisplayView.as_view(), name="userdisplay"),
 ]+static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
